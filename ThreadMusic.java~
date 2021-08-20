@@ -1,0 +1,31 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class ThreadMusic implements Runnable{
+  
+  public ThreadMusic()
+  {
+    
+  }
+  
+  public void run()
+  {
+    while(true)
+    {
+    InputStream music;
+    try
+    {
+      music = new FileInputStream(new File(filepath));
+      AudioStream audios = new AudioStream(music);
+      AudioPlayer.player.start(audios);
+      //sleep(5000);
+      sleep(83000);
+      AudioPlayer.player.stop(audios);
+    }
+    catch(Exception e)
+    {
+      JOptionPane.showMessageDialog(null,"Error");
+    }
+    }
+  }
+}

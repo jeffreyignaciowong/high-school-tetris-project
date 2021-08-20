@@ -1,0 +1,25 @@
+/**
+ * Auto Generated Java Class.
+ */
+public class ThreadDrop implements Runnable{
+  
+  public ThreadDrop()
+  {
+    
+  }
+  
+  public void run()
+  {
+    try{
+      while(true)
+      {
+        //System.out.println();
+        //System.out.print("ThreadDrop works");
+        Thread.sleep(500);
+        FinalProject.drop = true;
+      }
+    }catch(Exception e){
+      //System.out.println("Rip");
+    }
+  }
+}
